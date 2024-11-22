@@ -1,2 +1,2 @@
 # cv
-webapp for my curriculum vitae
+Angular webapp for my curriculum vitae

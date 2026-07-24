@@ -3,66 +3,17 @@
     <div class="exp-container">
 
         <mat-accordion>
-            <!-- exp1 -->
-            <mat-expansion-panel>
+            <mat-expansion-panel *ngFor="let job of ('Experience.jobs' | translate)">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        {{ 'Experience.line1' | translate }}
+                        {{ job.title }}
                     </mat-panel-title>
                 </mat-expansion-panel-header>
-                <mat-card-title>SIDESYS IT SOLUTIONS</mat-card-title>
-                <img mat-card-image src="../../../assets/images/sidesys.jpg" alt="SIDESYS IT SOLUTIONS">
-                <p>
-                    {{ 'Experience.line2' | translate }}
-                </p>
-            </mat-expansion-panel>
-            <!-- exp2 -->
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        {{ 'Experience.line4' | translate }}
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <mat-card-title>{{ 'Experience.line3' | translate }}</mat-card-title>
-                <p>
-                    {{ 'Experience.line5' | translate }}
-                </p>
-                <p>
-                    <i>
-                        {{ 'Experience.line6' | translate }}
-                    </i>
-                </p>
-            </mat-expansion-panel>
-            <!-- exp3 -->
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        {{ 'Experience.line7' | translate }}
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <mat-card-title>{{ 'Experience.line8' | translate }}</mat-card-title>
-                <p>
-                    {{ 'Experience.line9' | translate }}
-                </p>
-                <p>
-                    <i>
-                        {{ 'Experience.line13' | translate }}
-                    </i>
-                </p>
-            </mat-expansion-panel>
-            <!-- exp4 -->
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        {{ 'Experience.line10' | translate }}
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <mat-card-title>{{ 'Experience.line11' | translate }}</mat-card-title>
-                <p>
-                    <i>
-                        {{ 'Experience.line12' | translate }}
-                    </i>
-                </p>
+                <mat-card-title>{{ job.company }}</mat-card-title>
+                <p><i>{{ job.dates }}</i></p>
+                <ul>
+                    <li *ngFor="let bullet of job.bullets">{{ bullet }}</li>
+                </ul>
             </mat-expansion-panel>
         </mat-accordion>
     </div>

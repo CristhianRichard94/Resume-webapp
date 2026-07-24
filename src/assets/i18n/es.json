@@ -35,19 +35,40 @@
         "line11": "Nivel de Alemán A1 (comprensión oral, escritura)."
     },
     "Experience": {
-        "line1" : "Desarrollador Frontend",
-        "line2" : "Período: 06/2019 - actualidad",
-        "line3" : "Grupo de investigación",
-        "line4" : "Becario",
-        "line5" : "Desarrollo como becario dentro del grupo de investigación de base de datos de la FRCU-UTN.",
-        "line6" : "2018 - Actualidad",
-        "line7" : "Análisis de datos",
-        "line8" : "Proyecto 'Agregando valor'",
-        "line9" : "Análisis de datos de empresas y devolución de resultados obtenidos.",
-        "line10" : "Ayudante de cátedra Ad Honorem",
-        "line11" : "Asignatura 'Gestión de datos'",
-        "line12" : "Período: 04/2019 - 06/2019",
-        "line13" : "Período: 02/2019 - 04/2019"
+        "jobs": [
+            {
+                "title": "Ingeniero de Software Independiente",
+                "company": "Freelance y Proyectos Independientes",
+                "dates": "Jun 2025 – Actualidad",
+                "bullets": [
+                    "Desarrollé una aplicación cloud-native de gestión de stock, automatizando el control de inventario y pedidos y ahorrando un 60% del tiempo operativo.",
+                    "Diseñé y desplegué flujos de automatización con IA (Make) para pequeños negocios, incluyendo publicación automática en redes sociales y respuesta inteligente de emails.",
+                    "Desarrollé landing pages de alta conversión para pequeños negocios, habilitando presencia digital y captación de clientes."
+                ]
+            },
+            {
+                "title": "Senior Fullstack AI Developer",
+                "company": "Media.Monks",
+                "dates": "Ene 2021 – May 2025 · Remoto",
+                "bullets": [
+                    "Implementé soluciones de enriquecimiento de metadata con IA en más de 20.000 sitios web, logrando una mejora del 30% en discoverability y precisión SEO.",
+                    "Diseñé microservicios escalables e infraestructura serverless (GCP Cloud Functions, App Engine) usando Vertex AI.",
+                    "Lideré el desarrollo integral de un constructor de sitios de marketing en Angular y contribuí a una plataforma de gestión de campañas con IA en React a gran escala.",
+                    "Gestioné el ciclo de vida completo de modelos de IA, acelerando la producción de contenido hasta un 30%.",
+                    "Optimicé pipelines de CI/CD, logrando una reducción del 40% en el tiempo de deployment."
+                ]
+            },
+            {
+                "title": "Desarrollador Frontend",
+                "company": "Sidesys IT Solutions",
+                "dates": "Jun 2019 – Ene 2021",
+                "bullets": [
+                    "Desarrollé servicios RESTful (.NET Framework) que dan soporte a un sistema de gestión de colas bancarias a gran escala, mediante una aplicación de Cajero en Angular.",
+                    "Desarrollé un frontend de agendamiento de turnos con Vue.js, integrado con un backend .NET vía OpenAPI.",
+                    "Colaboré directamente con clientes en múltiples proyectos web utilizando la metodología Agile/Scrum."
+                ]
+            }
+        ]
     },
     "PersonalInfo" : {
         "title" : "Sobre mí",

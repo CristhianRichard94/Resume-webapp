@@ -35,18 +35,40 @@
         "line11": "Deutsch Level A1 (understanding, oral, writing)"
     },
     "Experience": {
-        "line1" : "Frontend Developer",
-        "line2" : "Term: Since 06/2019",
-        "line3" : "Research Group",
-        "line4" : "Scholar",
-        "line5" : "Perform as scholar on the Databases Research Group - FRCU UTN",
-        "line6" : "Term: Since 2018",
-        "line7" : "Data Analysis",
-        "line8" : "Project 'Agregando valor'",
-        "line9" : "Data analysis about organizations and return of the obtained results.",
-        "line10" : "Assistant Professor Ad Honorem",
-        "line11" : "Subject 'Data management'",
-        "line12" : "Term: 04/2019 - 06/2019"
+        "jobs": [
+            {
+                "title": "Independent Software Engineer",
+                "company": "Freelance & Independent Projects",
+                "dates": "Jun 2025 – Present",
+                "bullets": [
+                    "Built a cloud-native stock management application, automating inventory tracking and order workflows and saving 60% of operational time.",
+                    "Designed and deployed AI-powered automation workflows (Make) for small businesses, including automated social media posting and intelligent email response systems.",
+                    "Developed high-converting landing pages for small businesses, enabling digital presence and customer acquisition."
+                ]
+            },
+            {
+                "title": "Senior Fullstack AI Developer",
+                "company": "Media.Monks",
+                "dates": "Jan 2021 – May 2025 · Remote",
+                "bullets": [
+                    "Engineered AI-powered metadata enrichment across 20,000+ websites, driving a 30% uplift in discoverability and SEO accuracy.",
+                    "Architected scalable microservices and serverless infrastructure (GCP Cloud Functions, App Engine) using Vertex AI.",
+                    "Spearheaded full-lifecycle development of a dynamic Angular marketing site builder and contributed to a large-scale React AI-powered campaign management platform.",
+                    "Managed end-to-end AI model lifecycle, speeding up content production by up to 30%.",
+                    "Streamlined CI/CD pipelines, achieving a 40% reduction in deployment time."
+                ]
+            },
+            {
+                "title": "Frontend Developer",
+                "company": "Sidesys IT Solutions",
+                "dates": "Jun 2019 – Jan 2021",
+                "bullets": [
+                    "Built RESTful services (.NET Framework) powering a large-scale bank queue management system via an Angular-based Cashier Application.",
+                    "Developed a full-featured appointment scheduling frontend with Vue.js, integrating with a .NET backend via OpenAPI.",
+                    "Collaborated directly with clients across multiple web application projects using Agile/Scrum."
+                ]
+            }
+        ]
     },
     "PersonalInfo" : {
         "title" : "About me",

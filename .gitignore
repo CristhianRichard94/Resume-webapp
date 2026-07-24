@@ -37,6 +37,9 @@ dist/
 node_modules/
 jspm_packages/
 
+# Angular CLI build cache
+.angular/
+
 # TypeScript v1 declaration files
 typings/
 

@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
+  standalone: false,
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
@@ -13,11 +14,11 @@ export class FooterComponent implements OnInit {
   constructor(
     private translate: TranslateService
   ) {
-    this.translate.setDefaultLang(this.activeLang);
+    this.translate.use(this.activeLang);
   }
   ngOnInit() {
   }
-  public changeLang(lang) {
+  public changeLang(lang: string) {
     this.activeLang = lang;
     this.translate.use(lang);
   }

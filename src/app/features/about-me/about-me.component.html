@@ -4,7 +4,7 @@
     <p >{{ 'PersonalInfo.line2' | translate }}<strong>{{age}}</strong></p>
     <p >{{ 'PersonalInfo.line3' | translate }}<strong>{{ 'Other.degree' | translate }}</strong></p>
     <h3 >{{ 'PersonalInfo.hobbies' | translate }}</h3>
-    <mat-chip-list class="chip-list">
+    <mat-chip-set class="chip-list">
         <mat-chip color="primary">
                 <i class="fas fa-futbol"></i>
             </mat-chip>
@@ -20,11 +20,11 @@
         <mat-chip color="primary">
                 <i class="fas fa-beer"></i>
             </mat-chip>
-        </mat-chip-list>
+        </mat-chip-set>
     <h1 class="sm-center" >
         {{ 'PersonalInfo.skills' | translate }}
     </h1>
-    <mat-chip-list class="chip-list">
+    <mat-chip-set class="chip-list">
         <mat-chip color="primary" *ngFor="let skill of skills">{{skill}}</mat-chip>
-    </mat-chip-list>
+    </mat-chip-set>
 </div>

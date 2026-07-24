@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CustomMaterialModule } from './custom-material.module';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -9,11 +9,13 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [
     CommonModule,
     CustomMaterialModule,
-    TranslateModule
+    TranslateDirective,
+    TranslatePipe
   ],
   exports: [
     CustomMaterialModule,
-    TranslateModule
+    TranslateDirective,
+    TranslatePipe
   ]
 })
 export class SharedModule { }

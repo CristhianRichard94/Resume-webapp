@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ExperienceRoutingModule } from './experience-routing.module';
 import { ExperienceComponent } from './experience.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({

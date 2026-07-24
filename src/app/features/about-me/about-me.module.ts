@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AboutMeRoutingModule } from './about-me-routing.module';
 import { AboutMeComponent } from './about-me.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({

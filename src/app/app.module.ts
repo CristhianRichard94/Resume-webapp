@@ -20,7 +20,9 @@ import { CoreModule } from './core/core.module';
   providers: [
     provideHttpClient(),
     provideTranslateService({
-      loader: provideTranslateHttpLoader({ prefix: '/assets/i18n/', suffix: '.json' })
+      loader: provideTranslateHttpLoader({ prefix: '/assets/i18n/', suffix: '.json' }),
+      lang: 'es',
+      fallbackLang: 'es'
     })
   ],
   bootstrap: [AppComponent]

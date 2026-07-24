@@ -1,49 +1,47 @@
 <mat-toolbar id="nav-bar">
     <div class="buttons-container">
-        <button class="menu-trigger" mat-button (click)="smMenu = !smMenu">
-            <mat-icon >menu</mat-icon>
+        <button #menuTrigger class="menu-trigger" mat-icon-button type="button" (click)="toggleMenu()"
+            [attr.aria-expanded]="smMenu" aria-controls="sm-menu" [attr.aria-label]="smMenu ? 'Close menu' : 'Open menu'">
+            <mat-icon>{{ smMenu ? 'close' : 'menu' }}</mat-icon>
         </button>
         <div class="nav-button-container">
-            <button mat-button routerLink="/home"
-                routerLinkActive="active-link">{{ 'Sections.home' | translate | uppercase}}</button>
-            <button mat-button routerLink="/experience"
-                routerLinkActive="active-link">{{ 'Sections.experience' | translate |uppercase }}</button>
-            <button mat-button routerLink="/education"
-                routerLinkActive="active-link">{{ 'Sections.education' | translate | uppercase}}</button>
-            <button mat-button routerLink="/about-me"
-                routerLinkActive="active-link">{{ 'Sections.info' | translate | uppercase}}</button>
-            <button mat-button routerLink="/projects"
-                routerLinkActive="active-link">{{ 'Sections.projects' | translate | uppercase}}</button>
-            <button mat-button>
-                <a href="../../../assets/{{'Other.Files.cv' | translate }}" download>
-                    {{ 'Other.download' | translate | uppercase}}
-                </a>
-            </button>
+            <a class="nav-link" routerLink="/home"
+                routerLinkActive="active-link">{{ 'Sections.home' | translate | uppercase}}</a>
+            <a class="nav-link" routerLink="/experience"
+                routerLinkActive="active-link">{{ 'Sections.experience' | translate |uppercase }}</a>
+            <a class="nav-link" routerLink="/education"
+                routerLinkActive="active-link">{{ 'Sections.education' | translate | uppercase}}</a>
+            <a class="nav-link" routerLink="/about-me"
+                routerLinkActive="active-link">{{ 'Sections.info' | translate | uppercase}}</a>
+            <a class="nav-link" routerLink="/projects"
+                routerLinkActive="active-link">{{ 'Sections.projects' | translate | uppercase}}</a>
+            <a class="nav-link" href="../../../assets/{{'Other.Files.cv' | translate }}" download>
+                {{ 'Other.download' | translate | uppercase}}
+            </a>
         </div>
     </div>
     <h4>Cristhian Richard</h4>
 </mat-toolbar>
-<div *ngIf="smMenu" class="sm-menu">
+<div #smMenuPanel id="sm-menu" class="sm-menu" role="dialog" aria-modal="true" aria-label="Navigation menu"
+    [style.display]="smMenu ? null : 'none'">
         <div class="buttons">
-            <button class="menu-buttons" mat-button routerLink="/home" (click)="smMenu = false"
-                routerLinkActive="active-link-sm">{{ 'Sections.home' | translate | uppercase}}</button>
-            <button class="menu-buttons" mat-button routerLink="/experience" (click)="smMenu = false"
-                routerLinkActive="active-link-sm">{{ 'Sections.experience' | translate | uppercase}}</button>
-            <button class="menu-buttons" mat-button routerLink="/education" (click)="smMenu = false"
-                routerLinkActive="active-link-sm">{{ 'Sections.education' | translate | uppercase }}</button>
-            <button class="menu-buttons" mat-button routerLink="/about-me" (click)="smMenu = false"
-                routerLinkActive="active-link-sm">{{ 'Sections.info' | translate | uppercase }}</button>
-            <button class="menu-buttons" mat-button routerLink="/projects" (click)="smMenu = false"
-                routerLinkActive="active-link-sm">{{ 'Sections.projects' | translate | uppercase}}</button>
-            <button class="menu-buttons" mat-button (click)="smMenu = false">
-                <a href="../../../assets/{{'Other.Files.cv' | translate }}" download>
-                    {{ 'Other.download' | translate | uppercase}}
-                </a>
+            <button #closeMenuButton class="close-menu" mat-icon-button type="button" (click)="closeMenu()" aria-label="Close menu">
+                <mat-icon>close</mat-icon>
             </button>
-            <button class="menu-buttons" mat-button (click)="smMenu = false">
-                <mat-icon>highlight_off</mat-icon>
-            </button>
+            <a class="menu-buttons" routerLink="/home" (click)="closeMenu(false)"
+                routerLinkActive="active-link-sm">{{ 'Sections.home' | translate | uppercase}}</a>
+            <a class="menu-buttons" routerLink="/experience" (click)="closeMenu(false)"
+                routerLinkActive="active-link-sm">{{ 'Sections.experience' | translate | uppercase}}</a>
+            <a class="menu-buttons" routerLink="/education" (click)="closeMenu(false)"
+                routerLinkActive="active-link-sm">{{ 'Sections.education' | translate | uppercase }}</a>
+            <a class="menu-buttons" routerLink="/about-me" (click)="closeMenu(false)"
+                routerLinkActive="active-link-sm">{{ 'Sections.info' | translate | uppercase }}</a>
+            <a class="menu-buttons" routerLink="/projects" (click)="closeMenu(false)"
+                routerLinkActive="active-link-sm">{{ 'Sections.projects' | translate | uppercase}}</a>
+            <a class="menu-buttons" href="../../../assets/{{'Other.Files.cv' | translate }}" download (click)="closeMenu(false)">
+                {{ 'Other.download' | translate | uppercase}}
+            </a>
         </div>
-        <div class="backdrop" (click)="smMenu = false">
+        <div class="backdrop" (click)="closeMenu()">
         </div>
     </div>

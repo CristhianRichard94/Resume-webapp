@@ -1,15 +1,44 @@
 @import '../../../assets/styles/global/colors';
+@import '../../../assets/styles/global/spacing';
+@import '../../../assets/styles/global/motion';
+@import '../../../assets/styles/global/breakpoints';
 
 #nav-bar {
     position: fixed;
     background-color: $background-dark-color;
     display: flex;
     align-items: center;
-    height: 10vh!important;
+    min-height: 4rem;
+    max-height: 10vh;
     color: $text-light-color!important;
     top: 0;
     justify-content: space-between
 }
+
+.nav-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 spacing(base);
+    color: $text-light-color;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color $dur-fast $ease-out, border-color $dur-fast $ease-out;
+
+    &:hover {
+        color: lighten($secondary-color, 10%);
+    }
+
+    &:active {
+        color: darken($secondary-color, 5%);
+    }
+}
+
 .sm-menu {
     position: absolute;
     top: 10vh;
@@ -22,19 +51,52 @@
     left: 0;
     flex-direction: column;
     color: $text-light-color!important;
-    background: #343434;
+    background: $text-dark-color;
     width: 100%;
     z-index: 2010;
+    opacity: 0;
+    transform: translateY(-8px);
+    animation: sm-menu-in $dur-menu $ease-out forwards;
 }
+
+@keyframes sm-menu-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 hr {
     margin: 0
 }
 .menu-trigger {
     display: none;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.close-menu {
+    align-self: flex-end;
+    min-width: 44px;
+    min-height: 44px;
+    margin: spacing(xs);
 }
 
 .menu-buttons{
-    width: 100%
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: spacing(sm) 0;
+    color: $text-light-color;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: color $dur-fast $ease-out, background-color $dur-fast $ease-out;
+
+    &:hover {
+        color: lighten($secondary-color, 10%);
+    }
 }
 
 .active-link-sm {
@@ -43,8 +105,9 @@ hr {
 }
 
 .active-link {
-    border-bottom: 1px solid white;
+    border-bottom-color: $accent-color;
     border-radius: 0;
+    font-weight: 600;
 }
 
 .backdrop {
@@ -55,9 +118,16 @@ hr {
     height: 100vh;
     top: 0;
     left: 0;
-  }
+    opacity: 0;
+    animation: backdrop-in $dur-menu $ease-out forwards;
+}
 
-  
+@keyframes backdrop-in {
+    to {
+        opacity: 1;
+    }
+}
+
 @media (max-width: 930px) {
     .nav-button-container {
         display:none!important;
@@ -65,4 +135,4 @@ hr {
     .menu-trigger {
         display: flex!important;
     }
-  }
+}

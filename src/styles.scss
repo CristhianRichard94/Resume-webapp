@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import './assets/styles/global/colors';
+@import './assets/styles/global/breakpoints';
+@import './assets/styles/global/spacing';
+@import './assets/styles/global/type';
+@import './assets/styles/global/motion';
+@import './assets/styles/global/a11y';
 
 html,
 body {

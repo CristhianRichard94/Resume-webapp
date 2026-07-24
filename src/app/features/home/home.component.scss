@@ -1,5 +1,7 @@
 @import "../../../assets/styles/styles.scss";
 @import "../../../assets/styles/global/_colors.scss";
+@import "../../../assets/styles/global/_breakpoints.scss";
+@import "../../../assets/styles/global/_spacing.scss";
 
 :host {
   background: url("../../../assets/images/photo-1534972195531-d756b9bfa9f2.jpg")
@@ -49,6 +51,21 @@ p {
   padding: .5rem
 }
 .under-construction img {
-  max-width: 25vw;
+  max-width: 100%;
+  height: auto;
   padding: .5rem
+}
+
+@media (min-width: $bp-lg) {
+  .main,
+  .ps {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  .under-construction img {
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+  }
 }

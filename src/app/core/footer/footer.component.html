@@ -18,7 +18,9 @@
         <mat-icon aria-hidden="false">language</mat-icon>
         </button>
     <mat-menu #languageMenu class="lang-menu">
-        <button mat-menu-item class="menu-buttons"  [ngClass]="{'active': activeLang == 'es'}" (click)="changeLang('es')" >{{ 'Other.Languages.es' | translate }}</button>
-        <button mat-menu-item class="menu-buttons" [ngClass]="{'active': activeLang == 'en'}" (click)="changeLang('en')" >{{ 'Other.Languages.en' | translate }}</button>
+        <button mat-menu-item class="menu-buttons" [ngClass]="{'active': activeLang == 'es'}"
+            [attr.aria-current]="activeLang == 'es' ? 'true' : null" (click)="changeLang('es')">{{ 'Other.Languages.es' | translate }}</button>
+        <button mat-menu-item class="menu-buttons" [ngClass]="{'active': activeLang == 'en'}"
+            [attr.aria-current]="activeLang == 'en' ? 'true' : null" (click)="changeLang('en')">{{ 'Other.Languages.en' | translate }}</button>
     </mat-menu>
 </div>

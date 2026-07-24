@@ -1,3 +1,6 @@
+@import '../../../assets/styles/global/breakpoints';
+@import '../../../assets/styles/global/motion';
+
 :host {
     display: flex;
     justify-content: center;
@@ -13,12 +16,25 @@
     margin: .5rem
 }
 
-@media (min-width: 525px) {
+.exp-container ::ng-deep .mat-expansion-panel {
+    transition: transform $dur-base $ease-out, box-shadow $dur-base $ease-out;
+
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+    }
+}
+
+img {
+    width: 100%
+}
+
+@media (min-width: $bp-sm) {
     .container {
         width: 75%
     }
   }
-@media (min-width: 750px) {
+@media (min-width: $bp-md) {
     .container {
         width: 50%
     }

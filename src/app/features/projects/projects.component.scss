@@ -1,4 +1,6 @@
 @import '../../../assets/styles/global/colors';
+@import '../../../assets/styles/global/breakpoints';
+@import '../../../assets/styles/global/motion';
 
 :host {
     width: 100%
@@ -6,6 +8,34 @@
 .container {
     margin: .5rem;
     text-align: justify
+}
+
+.project {
+    transition: transform $dur-base $ease-out, box-shadow $dur-base $ease-out;
+    border-radius: 5px;
+
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+    }
+}
+
+.btn-primary {
+    transition: background-color $dur-fast $ease-out;
+
+    &:hover:not(:disabled) {
+        background-color: darken($secondary-color, 8%);
+    }
+
+    &:active:not(:disabled) {
+        background-color: darken($secondary-color, 15%);
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        transform: none;
+    }
 }
 
 h1 {

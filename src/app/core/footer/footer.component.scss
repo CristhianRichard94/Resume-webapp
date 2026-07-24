@@ -1,4 +1,5 @@
 @import '../../../assets/styles/global/colors';
+@import '../../../assets/styles/global/motion';
 
 
 .container {
@@ -7,11 +8,18 @@
     justify-content: center;
     align-items: center;
     color: $text-light-color;
-    height: 6vh!important;
+    min-height: 3.5rem;
 }
 
 .container button {
     font-size: 1.4rem;
+    min-width: 44px;
+    min-height: 44px;
+    transition: transform $dur-fast;
+
+    &:hover {
+        transform: scale(1.03);
+    }
 }
 .lang-menu {
     background-color: $background-dark-color;
@@ -21,10 +29,13 @@ button a {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .active {
-    background-color: $text-light-color;
-    color: $text-dark-color;
-    font-weight: bolder;
+    background-color: transparent;
+    border-bottom: 2px solid $accent-color;
+    font-weight: 700;
+    color: $accent-color;
 }
